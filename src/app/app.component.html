@@ -1,0 +1,14 @@
+    <mat-drawer-container autosize class="main">
+        <mat-drawer #drawer mode="side" opened>
+            <app-drawer></app-drawer>
+        </mat-drawer>
+        <div class="example-sidenav-content">
+            <div class="menu">
+                <button type="button" mat-button (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span id="header">Calendario 2023</span>
+            </div>
+            <app-home></app-home>
+        </div>
+    </mat-drawer-container>    

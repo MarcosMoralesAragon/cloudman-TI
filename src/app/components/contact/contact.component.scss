@@ -1,0 +1,15 @@
+@use '../../../styles.scss' as s;
+
+article{
+    margin: s.$border-space;
+}
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.full-width{
+    width: 100%;
+}

@@ -1,0 +1,61 @@
+<article>
+    <!-- Calendar part -->
+    <section>
+        <div class="calendar">
+            <!-- Month selector -->
+            <div class="header-calendar">
+                <div>
+                    <button (click)="changeMonth(-1)"><</button>
+                </div>
+                <span class="month-text">{{dateSelect | date:'MMMM, yyyy'}}</span>
+                <div>
+                    <button (click)="changeMonth(1)">></button>
+                </div>
+            </div>
+            <ol>
+                <!-- Days of the week -->
+                <li *ngFor="let day of week" class="day-week">{{day | slice:0:3}}</li>
+        
+                <!-- Number of the days and -->
+                <li class="day"
+                [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
+                *ngFor="let day of monthSelect;let first = first"
+                >
+                    <span
+                    [class.today] = "day?.today"
+                    >{{day?.value}}</span>   
+                    <div class="dot"
+                    [class.national] = "day?.type == 'national'"
+                    [class.regional] = "day?.type == 'regional'"
+                    [class.local] = "day?.type == 'local'"
+                    [class.todayBackground] = "day?.today"
+                    >
+                    </div>
+                    
+                </li>
+            </ol>
+        </div>
+    </section>
+    <!-- Row part -->
+    <section>
+        <div class="holiday-list">
+            <span class="header-list">Festivos 2023</span>
+            <div>
+                <!-- Loop to iterate all the holidays as a list -->
+                <ng-container *ngFor="let holiday of holidays">
+                    <div class="holiday">
+                        <div class="align-center"
+                        >
+                            <div class="dot"
+                            [class.national] = "holiday?.type == 'national'"
+                            [class.regional] = "holiday?.type == 'regional'"
+                            [class.local] = "holiday?.type == 'local'"></div>
+                        </div>
+                        <div class="holiday-text align-left">{{holiday.day}} del {{holiday.month}} // {{holiday.description}}</div>
+                        <div class="holiday-status align-left">Festivo {{holiday.type}}</div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </section>
+</article>

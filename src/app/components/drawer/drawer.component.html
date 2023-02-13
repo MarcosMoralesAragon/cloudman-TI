@@ -1,0 +1,56 @@
+<article>
+    <!-- Top part -->
+    <section>
+        <!-- User Icon & name -->
+        <div class="iconAndname">
+            <div id="background-icon">
+                <mat-icon id="icon">person</mat-icon>
+            </div>
+            <span class="header-text">{{userData.name}} {{userData.surname}}</span>
+        </div>
+
+        <!-- Work -->
+        <div class="two-rows">
+            <span class="header-text">Cargo</span>
+            <span class="result-text">{{userData.position}}</span>
+        </div>
+
+        <!-- Email -->
+        <div class="two-rows">
+            <span class="header-text">E-mail</span>
+            <span class="result-text">{{userData.email}}</span>
+        </div>
+
+        <!-- Phone -->
+        <div class="two-rows">
+            <span class="header-text">Teléfono</span>
+            <span class="result-text">{{userData.phone}}</span>
+        </div>
+
+        <!-- Vacations -->
+        <div class="two-rows">
+            <span class="header-text">Día de vacaciones <br>restantes</span>
+            <span class="result-text">{{userData.vacationDays}}</span>
+        </div>
+
+        <!-- Button error -->
+        <div>
+            <!-- TODO: Añadir ventana popup para enviar comentarios -->
+            <button mat-raised-button (click)="openDialog()">Informar de un error</button>
+        </div>
+    </section>
+
+    <!-- Bottom part -->
+    <section>
+
+        <!-- Cloudman logo -->
+        <div>
+            <img src="../../../assets/img/logo_web.svg">
+        </div>
+
+        <!-- Footer -->
+        <div>
+            <p class="result-text">Desarrollado con ❤️</p>
+        </div>
+    </section>
+</article>

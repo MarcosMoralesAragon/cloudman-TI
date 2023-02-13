@@ -1,0 +1,60 @@
+// Contrast score 4.5 ✅
+$background-color: #707070;
+$text-color: #f4f4f4;
+
+@use '../../../styles.scss' as s;
+// Spacing propertys used all around the style
+
+
+article{
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $background-color;
+}
+section{
+    padding-left: s.$border-space;
+    padding-top: s.$border-space;
+    padding-bottom: s.$border-space;
+    margin-right: s.$border-space;
+}
+section div{
+    margin-top: s.$big-space;
+    margin-bottom: s.$big-space;
+}
+
+.two-rows{
+    display: flex;
+    flex-direction: column;
+}
+
+.two-rows span{
+    margin-top: s.$small-space;
+    margin-bottom: s.$small-space;
+}
+
+.header-text{
+    font-size: 1.1rem;
+    color: $text-color;
+    font-weight: bold;
+}
+.result-text{
+    color: $text-color;
+}
+
+.iconAndname{
+    display: flex;
+    align-items: center;
+    margin-top: 0px !important;
+}
+#background-icon{
+    background-color: lightblue;
+    margin-right: s.$big-space;
+    border-radius: 50%;
+}
+#icon{
+    padding: s.$small-space;
+    color: blue;
+}

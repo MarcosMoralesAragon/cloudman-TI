@@ -1,0 +1,16 @@
+@use '../styles.scss' as s;
+
+.main{
+    width: 100%;
+    height: 100vh;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding : s.$border-space;
+}
+#header{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
